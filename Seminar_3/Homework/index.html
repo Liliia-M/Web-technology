@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Молодец, <span id="userName"></span>! Ты ответил на все вопросы.<br>
+    Я сейчас читаю книгу известного польского писателя, написавшего также книгу: "<span id="demo"></span>".<br>
+    Имя автора <span id="polName"></span> Сапковский.<br>
+    Книга называется: "<span id="book"></span> о Рейневане."</p> 
+    <script language="JavaScript">
+
+        function showMessage(name) {
+            alert(`Привет, ${name}! Ответь на несколько вопросов или дополни фразу и я расскажу тебе какую книгу сейчас читаю.`);
+        }
+        
+        var userName = prompt("Введите имя!");
+        showMessage(userName);
+        document.getElementById("userName").innerHTML = userName;
+
+        var gameName = prompt("Компьютерная игра с атмосферой магии и волшебства, содержащая множество сражений главного героя из Ривии с чудовищами.");
+        document.getElementById("demo").innerHTML = gameName;
+
+        var name = prompt("Имя президента Польши.");
+        document.getElementById("polName").innerHTML = name;
+
+        var bookName = prompt("Известная ... о вампирах или о форсайтах.");
+        document.getElementById("book").innerHTML = bookName;
+    </script>
+   
+</body>
+</html>
